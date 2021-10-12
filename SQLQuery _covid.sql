@@ -1,13 +1,13 @@
 select * from
 Portfolio_project..CovidDeaths
 order by 3,4
-
+-- Percentage of death in India --
 select Location, date, total_cases, total_deaths,(total_deaths/total_cases)*100 as Death_percentage, population
 from Portfolio_project..CovidDeaths 
 where location = 'India'
 order by 1,2
 
-
+-- Infected percentage in India --
 select Location, date,population,total_cases,(total_cases/population)*100 as Affected_percentage 
 from Portfolio_project..CovidDeaths 
 where location = 'India'
